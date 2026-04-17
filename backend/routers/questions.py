@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from typing import List
-from backend.models.question import QuestionResponse
-from backend.services.question_service import QuestionService
+from models.question import QuestionResponse
+from services.question_service import QuestionService
 
 router = APIRouter(prefix="/questions", tags=["Questions"])
 

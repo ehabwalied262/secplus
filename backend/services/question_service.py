@@ -1,4 +1,4 @@
-﻿from backend.config import supabase
+﻿from config import supabase
 
 class QuestionService:
     @staticmethod

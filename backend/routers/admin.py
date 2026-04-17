@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException
 from typing import List
-from backend.models.question import QuestionResponse
-from backend.services.question_service import QuestionService
-from backend.config import supabase_admin
+from models.question import QuestionResponse
+from services.question_service import QuestionService
+from config import supabase_admin
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 

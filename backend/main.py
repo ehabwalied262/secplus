@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import questions, admin
+from routers import questions, admin
 
 app = FastAPI(title="SecPlus Quiz API")
 
-# VERY IMPORTANT: This allows your frontend to talk to your backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

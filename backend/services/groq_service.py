@@ -1,6 +1,6 @@
 import json
 from groq import Groq
-from backend.config import Config
+from config import Config
 
 class GroqService:
     def __init__(self):
