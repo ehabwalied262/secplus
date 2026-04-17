@@ -1,0 +1,16 @@
+# Python Virtual Environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables (CRITICAL)
+.env
+
+# Logs
+debug.log
+*.log
+
+# System files
+.DS_Store
+Thumbs.db

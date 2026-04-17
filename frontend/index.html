@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security+ SY0-701 Prep</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>CompTIA Security+</h1>
+            <p class="text-muted">SY0-701 Certification Practice</p>
+        </header>
+
+        <div id="domain-list">
+            </div>
+    </div>
+
+    <script src="js/objectives.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('domain-list');
+            for (const [domain, objectives] of Object.entries(window.SY701_OBJECTIVES)) {
+                const section = document.createElement('div');
+                section.className = 'domain-section';
+                section.innerHTML = `
+                    <div class="domain-header"><h3>${domain}</h3></div>
+                    <div class="objective-grid">
+                        ${objectives.map(obj => `
+                            <a href="quiz.html?obj=${obj.id}" class="obj-card">
+                                <span><strong>${obj.id}</strong> ${obj.title}</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        `).join('')}
+                    </div>
+                `;
+                list.appendChild(section);
+            }
+        });
+    </script>
+</body>
+</html>
